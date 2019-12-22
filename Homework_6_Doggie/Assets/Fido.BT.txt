@@ -1,0 +1,20 @@
+tree("Root")
+	race
+		tree("Sleeping")
+		tree("Hunger")
+
+tree("Sleeping")
+	while not _Hungry
+		sequence
+			GettingSleepy
+			GettingIrritated
+			FallingAsleep
+			while _Asleep
+				Wakingup
+tree("Hunger")
+	sequence
+		GettingHungry
+		while not _Asleep
+			sequence
+				IsFood
+				Wait(5)
